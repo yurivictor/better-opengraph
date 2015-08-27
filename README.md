@@ -6,12 +6,12 @@ A really simple library that parses a page for open graph information with some 
 
 Add it to your project:
 
-`npm install `
+`npm install https://github.com/yurivictor/better-opengraph.git --save`
 
 ## Easy to use
 
 ```js
-var OpenGraph = require( 'better-opengraph' );
+var Opengraph = require( 'better-opengraph' );
 var og = new Opengraph();
 og.get( 'http://www.vox.com/2015/8/27/9214687/donald-trump-numbers-soar', function ( response ) {
   console.log( response );
