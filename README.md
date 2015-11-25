@@ -33,7 +33,10 @@ og.get( 'http://www.vox.com/2015/8/27/9214687/donald-trump-numbers-soar', functi
 Standard request options from [node request lib](https://github.com/request/request). All are optional.
 
 ```js
-og.get( 'http://nyti.ms/1MAcXZj', { jar: true }, function ( response ) {
+var options = {
+  jar: true
+}
+og.get( 'http://nyti.ms/1MAcXZj', options, function ( response ) {
   console.log( response );
 } );
 ```
