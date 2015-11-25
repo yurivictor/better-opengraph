@@ -1,6 +1,6 @@
 # Better Opengraph lib
 
-A really simple library that parses a page for open graph information with some smart fallbacks.
+A really simple library that parses a page for open graph information with some smart fallbacks. Will attempt to get page information even if opengraph fails.
 
 ## Install
 
