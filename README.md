@@ -48,6 +48,14 @@ client.og( 'http://nyti.ms/1MAcXZj', options, function ( response ) {
 - `followRedirect` - true
 - `jar` - true
 
+## People
+
+The original author is [@yurivictor](https://github.com/yurivictor).
+
+## License
+
+[MIT](LICENSE)
+
 ---
 
 [back to top](#better-opengraph)
