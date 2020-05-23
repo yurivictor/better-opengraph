@@ -1,5 +1,5 @@
 {
-  "name": "opengraph",
+  "name": "better-opengraph",
   "version": "0.0.2",
   "description": "A better opengraph",
   "main": "index.js",
