@@ -20,10 +20,10 @@ bo( 'https://www.nytimes.com/', ( json ) => {
 
 ## Response
 
-* **title** {String} – The article title
-* **description** {String} – The article description
+* **title** {String} – The webpage title
+* **description** {String} – The webpage description
 * **image** {Object}
-  * **url** {String} – The lead image for the article
+  * **url** {String} – The image for the page
 * **site_name** {String} – The name of the site
 * **type** {String} – The type of content (default: article)
 * **url** {String} – The canonical url for the page or the requested url
