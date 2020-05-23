@@ -1,52 +1,32 @@
 # Better Opengraph
 
-Parses a webpage for open graph information with smart fallbacks. Will attempt to get page information even if opengraph fails.
+Parses a webpage for opengraph information with smart fallbacks. Will attempt to get page information even if opengraph fails.
 
 ## Install
 
 Add it to your project:
 
-`npm install https://github.com/yurivictor/better-opengraph.git --save`
+`npm i https://github.com/yurivictor/better-opengraph.git --save`
 
 ## Easy to use
 
 ```js
-var bo = require( 'better-opengraph' );
-var client = bo();
+const bo = require( 'better-opengraph' );
 
-client.og( 'http://www.vox.com/cards/super-super-super-secret-easter-eggs/whats-an-easter-egg', function ( response ) {
-  console.log( response );
+bo( 'https://www.nytimes.com/', ( json ) => {
+  console.log( json );
 } );
 ```
 
 ## Response
 
-* **title** {string} – The article title
-* **description** {string} – The article description
-* **image** {object}
-  * **url** {string} – The lead image for the article
-* **site_name** {string} – The name of the site
-* **type** {string} – The type of content (usually article)
-* **url** {url} – The canonical url for the page
-
-## Options
-
-Standard request options from [node request lib](https://github.com/request/request). All are optional.
-
-```js
-var options = {
-  jar : true
-}
-client.og( 'http://nyti.ms/1MAcXZj', options, function ( response ) {
-  console.log( response );
-} );
-```
-
-### default
-
--  `maxRedirects` - 50,
-- `followRedirect` - true
-- `jar` - true
+* **title** {String} – The article title
+* **description** {String} – The article description
+* **image** {Object}
+  * **url** {String} – The lead image for the article
+* **site_name** {String} – The name of the site
+* **type** {String} – The type of content (default: article)
+* **url** {String} – The canonical url for the page or the requested url
 
 ## People
 
