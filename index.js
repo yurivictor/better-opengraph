@@ -7,4 +7,4 @@
 /**
  * Export opengraph
  */
-module.exports = require( './lib/opengraph' );
+module.exports = require( './lib/bo' );

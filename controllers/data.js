@@ -8,27 +8,13 @@
  */
 const axios = require( 'axios' );
 const cheerio = require( 'cheerio' );
-
-/**
- * Create model structure
- */
-const createModel = () => {
-  return {
-    "title": null, // String
-    "description": null, // String
-    "image": {
-      "url": null // String
-    },
-    "site_name": null, // String
-    "type": "article", // String (default)
-    "url": null // String
-  }
-};
+const { createModel } = require( '../models/model' );
 
 /**
  * Iterate through values and make sure if
  * anything is undefined it becomes null
  * @param {Object} json - the opengraph json
+ * @private
  */
 const checkJSON = ( json ) => {
 	const keys = Object.keys( json );
@@ -43,6 +29,7 @@ const checkJSON = ( json ) => {
 /**
  * Gets site name from the URL
  * @param {String} url - the url requested
+ * @private
  */
 const getSiteNameFromURL = ( url ) => {
 	// Get rid of protocol
@@ -103,15 +90,7 @@ const parse = ( $, url ) => {
   return json;
 };
 
-/**
- * Initiate OpenGraph
- */
-module.exports = opengraph = async ( url, callback ) => {
-  const $ = await fetch( url );
-  if ( $.error ) { return $.error }
-  const json = parse( $, url );
-  if ( typeof callback !== 'function' ) {
-    return json;
-  }
-  callback( json );
+module.exports = {
+  fetch,
+  parse
 };

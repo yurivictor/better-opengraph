@@ -4,12 +4,15 @@
   "description": "A better opengraph",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Yuri Victor <yurivictor@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.19.2",
     "cheerio": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.2"
   }
 }
