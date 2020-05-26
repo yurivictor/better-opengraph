@@ -13,7 +13,7 @@ Add it to your project:
 ```js
 const bo = require( 'better-opengraph' );
 
-bo( url )
+bo( 'https://www.nytimes.com/' )
 .then( json => console.log( json ) )
 .catch( error => console.log( error ) );
 ```
