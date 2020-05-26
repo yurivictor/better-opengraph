@@ -14,6 +14,7 @@ const { createModel } = require( '../models/model' );
  * Iterate through values and make sure if
  * anything is undefined it becomes null
  * @param {Object} json - the opengraph json
+ * @return {Object} json - the stringified updated JSON
  * @private
  */
 const checkJSON = ( json ) => {
@@ -29,6 +30,7 @@ const checkJSON = ( json ) => {
 /**
  * Gets site name from the URL
  * @param {String} url - the url requested
+ * @return {String} url - the site name
  * @private
  */
 const getSiteNameFromURL = ( url ) => {
