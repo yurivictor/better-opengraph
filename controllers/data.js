@@ -17,13 +17,13 @@ const { createModel } = require( '../models/model' );
  * @private
  */
 const checkJSON = ( json ) => {
-	const keys = Object.keys( json );
-	for ( const key of keys ) {
-		if ( json[key] === undefined ) {
-			json[key] = null;
-		}
-	}
-	return JSON.stringify( json );
+  const keys = Object.keys( json );
+  for ( const key of keys ) {
+    if ( json[key] === undefined ) {
+      json[key] = null;
+    }
+  }
+  return JSON.stringify( json );
 };
 
 /**
@@ -32,13 +32,13 @@ const checkJSON = ( json ) => {
  * @private
  */
 const getSiteNameFromURL = ( url ) => {
-	// Get rid of protocol
-	url = url.split( '://' );
-	// Get first entry
-	url = url[1].split( '/' );
-	// Get rid of www
-	url = url[0].replace( 'www.', '');
-	return url;
+  // Get rid of protocol
+  url = url.split( '://' );
+  // Get first entry
+  url = url[1].split( '/' );
+  // Get rid of www
+  url = url[0].replace( 'www.', '');
+  return url;
 };
 
 /**
