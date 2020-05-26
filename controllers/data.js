@@ -23,7 +23,7 @@ const checkJSON = ( json ) => {
 			json[key] = null;
 		}
 	}
-	return json;
+	return JSON.stringify( json );
 };
 
 /**
@@ -52,7 +52,7 @@ const fetch = async ( url ) => {
     // Load the page
     page = await axios.get( url );
   } catch ( error ) {
-    return  { error };
+    throw new Error( error );
   }
   // Return processed html
   return cheerio.load( page.data );
@@ -72,7 +72,7 @@ const parse = ( $, url ) => {
   } catch ( error ) {
     // If it can't find a title then you are probably not
     // going to be able to get anything meaningful
-    return { error };
+    throw new Error( error );
   }
   // Parse description, meta description
   json['description'] = $( 'meta[property="og:description"]' ).attr( 'content' ) || $( 'meta[name="description"]' ).attr( 'content' );
