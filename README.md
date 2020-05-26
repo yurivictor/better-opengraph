@@ -1,6 +1,6 @@
 # Better Opengraph
 
-Parses a webpage for opengraph information with smart fallbacks. Will attempt to get page information even if opengraph information does not exist.
+Parses a webpage for [opengraph](https://ogp.me/) information with smart fallbacks. Will attempt to get page information even if opengraph information does not exist.
 
 ## Install
 
