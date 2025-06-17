@@ -14,6 +14,4 @@ const createModel = () => {
   }
 };
 
-module.exports = {
-  createModel
-};
+export { createModel };

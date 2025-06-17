@@ -6,9 +6,9 @@
  * Module dependencies
  * @private
  */
-const axios = require( 'axios' );
-const cheerio = require( 'cheerio' );
-const { createModel } = require( '../models/model' );
+import axios from 'axios';
+import * as cheerio from 'cheerio';
+import { createModel } from '../models/model.js';
 
 /**
  * Iterate through values and make sure if
@@ -92,7 +92,4 @@ const parse = ( $, url ) => {
   return json;
 };
 
-module.exports = {
-  fetch,
-  parse
-};
+export { fetch, parse };

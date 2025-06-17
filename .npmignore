@@ -1,0 +1,6 @@
+node_modules/
+test.js
+example.js
+.git/
+.gitignore
+CONTRIBUTING.md
