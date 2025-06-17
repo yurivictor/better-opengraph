@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.30.0",
-    "cheerio": "^1.0.0-rc.3"
+    "cheerio": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "^7.1.2"
